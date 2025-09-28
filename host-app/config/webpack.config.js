@@ -567,9 +567,15 @@ module.exports = function (webpackEnv) {
       new webpack.container.ModuleFederationPlugin({
         name: 'host',
         remotes: {
-          authApp: 'authApp@http://localhost:3001/remoteEntry.js',
-          bookingApp: 'bookingApp@http://localhost:3002/remoteEntry.js',
-          reportingApp: 'reportingApp@http://localhost:3003/remoteEntry.js',
+          authApp: process.env.NODE_ENV === 'production'
+            ? 'authApp@https://mecro-auth-app.vercel.app/remoteEntry.js'
+            : 'authApp@http://localhost:3001/remoteEntry.js',
+          bookingApp: process.env.NODE_ENV === 'production'
+            ? 'bookingApp@https://mecro-booking-app.vercel.app/remoteEntry.js'
+            : 'bookingApp@http://localhost:3002/remoteEntry.js',
+          reportingApp: process.env.NODE_ENV === 'production'
+            ? 'reportingApp@https://mecro-reporting-app.vercel.app/remoteEntry.js'
+            : 'reportingApp@http://localhost:3003/remoteEntry.js',
         },
         shared: {
           react: {
