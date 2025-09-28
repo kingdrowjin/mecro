@@ -219,7 +219,7 @@ module.exports = function (webpackEnv) {
       // webpack uses `publicPath` to determine where the app is being served from.
       // It requires a trailing slash, or the file assets will get an incorrect path.
       // For Module Federation, each remote needs its own publicPath
-      publicPath: isEnvDevelopment ? 'http://localhost:3003/' : paths.publicUrlOrPath,
+      publicPath: isEnvDevelopment ? 'http://localhost:3003/' : 'https://mecro-reporting-app.vercel.app/',
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: isEnvProduction
         ? info =>
