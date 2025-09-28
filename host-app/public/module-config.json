@@ -1,0 +1,39 @@
+{
+  "modules": {
+    "auth": {
+      "name": "authApp",
+      "url": "http://localhost:3001/remoteEntry.js",
+      "scope": "authApp",
+      "module": "./AuthModule",
+      "routes": ["/auth", "/profile"],
+      "fallback": "AuthUnavailable",
+      "isActive": true,
+      "version": "1.0.0",
+      "description": "Authentication and user management module"
+    },
+    "booking": {
+      "name": "bookingApp",
+      "url": "http://localhost:3002/remoteEntry.js",
+      "scope": "bookingApp",
+      "module": "./BookingModule",
+      "routes": ["/booking", "/bookings"],
+      "fallback": "BookingUnavailable",
+      "isActive": true,
+      "version": "1.0.0",
+      "description": "Facility booking and management module"
+    },
+    "reporting": {
+      "name": "reportingApp",
+      "url": "http://localhost:3003/remoteEntry.js",
+      "scope": "reportingApp",
+      "module": "./ReportingModule",
+      "routes": ["/reports", "/analytics"],
+      "fallback": "ReportingUnavailable",
+      "isActive": true,
+      "version": "1.0.0",
+      "description": "Analytics and reporting dashboard module"
+    }
+  },
+  "environment": "development",
+  "lastUpdated": "2025-09-26T21:44:00.000Z"
+}
