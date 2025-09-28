@@ -150,13 +150,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ authContext, onLoginSuccess }) =>
           >
             👤 Admin User
           </button>
-          <button
-            type="button"
-            className="demo-button"
-            onClick={() => fillDemoCredentials('user')}
-          >
-            👤 Regular User
-          </button>
         </div>
       </div>
     </div>
