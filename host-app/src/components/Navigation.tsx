@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useUserStore, eventBus } from '@shared/lib';
+import { useUserStore, eventBus } from '../shared';
 
 const Navigation: React.FC = () => {
   const location = useLocation();

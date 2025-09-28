@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useUserStore, eventBus } from '@shared/lib';
+import { useUserStore, eventBus } from './shared';
 import LoginForm from './components/LoginForm';
 import ProfilePage from './components/ProfilePage';
 import './AuthModule.css';

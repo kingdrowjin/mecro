@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useUserStore, eventBus } from '@shared/lib';
+import { useUserStore, eventBus } from './shared';
 import Navigation from './components/Navigation';
 import RemoteModule from './components/RemoteModule';
 import ErrorBoundary from './components/ErrorBoundary';

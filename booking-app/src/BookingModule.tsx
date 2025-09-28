@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useUserStore, eventBus } from '@shared/lib';
+import { useUserStore, eventBus } from './shared';
 import './BookingModule.css';
 
 interface Booking {
