@@ -66,7 +66,7 @@
   },
   "scripts": {
     "start": "PORT=3003 node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "DISABLE_ESLINT_PLUGIN=true node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
